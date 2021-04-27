@@ -5,11 +5,15 @@ using UnityEngine;
 public class opencloseDoor1: MonoBehaviour {
 
 	public Animator openandclose1;
-	public bool open;
+	public bool open, isMoving;
 	public Transform Player;
+	Collider doorCollider;
 
 	void Start (){
 		open = false;
+		isMoving = false;
+		doorCollider = gameObject.GetComponent<Collider>();
+
 	}
 
 	void OnMouseOver (){
@@ -19,17 +23,24 @@ public class opencloseDoor1: MonoBehaviour {
 				if (dist < 15) {
 					if (open == false) {
 						if (Input.GetMouseButtonDown (0)) {
+							Debug.Log("Door Move is now true");
+							doorCollider.enabled = false;
 							StartCoroutine (opening ());
+
 						}
 					} else {
 						if (open == true) {
 							if (Input.GetMouseButtonDown (0)) {
+								Debug.Log("Door Move is now true");
+								doorCollider.enabled = false;
 								StartCoroutine (closing ());
+
+
 							}
 						}
-
+						
 					}
-
+					
 				}
 			}
 
@@ -42,6 +53,8 @@ public class opencloseDoor1: MonoBehaviour {
 		openandclose1.Play ("Opening 1");
 		open = true;
 		yield return new WaitForSeconds (.5f);
+		doorCollider.enabled = true;
+		Debug.Log("Door Move is now false");
 	}
 
 	IEnumerator closing(){
@@ -49,8 +62,8 @@ public class opencloseDoor1: MonoBehaviour {
 		openandclose1.Play ("Closing 1");
 		open = false;
 		yield return new WaitForSeconds (.5f);
+		doorCollider.enabled = true;
+		Debug.Log("Door Move is now false");
 	}
-
-
 }
 
