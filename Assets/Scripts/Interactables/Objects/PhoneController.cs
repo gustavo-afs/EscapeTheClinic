@@ -10,7 +10,7 @@ public class PhoneController : InteractiveActions
     bool introStarted = false;
     [SerializeField] PlayerMove playerMove;
     [SerializeField] GameObject environment;
-    [SerializeField] LifeController lifeController;
+    [SerializeField] GameManager gameManager;
 
 
     private void Start()
@@ -19,29 +19,20 @@ public class PhoneController : InteractiveActions
     }
     private void OnMouseOver()
     {
-        
-        if (ValidatePlayerClick())
+        if (!introStarted)
         {
-            if(!introStarted)
-            { 
-            director.Play();
-            introStarted = true;
-            }
-            else
+            if (ValidatePlayerClick())
             {
-                if (director.state != PlayState.Playing )
-                {
-                    Debug.Log("is not playing...");
-                    environment.SetActive(true);
-                    playerMove.enabled = true;
-                    lifeController.enabled = true;
-                    Destroy(gameObject);
-                }
-                else
-                {
-                    Debug.Log("is playing!");
-                }
+                director.Play();
+                introStarted = true;
             }
+        }
+        else if (director.state != PlayState.Playing)
+        {
+            environment.SetActive(true);
+            playerMove.enabled = true;
+            gameManager.enabled = true;
+            Destroy(gameObject);
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class KeypadController : InteractiveActions
 {
@@ -9,8 +10,9 @@ public class KeypadController : InteractiveActions
     int lockIndex = 1;
     [SerializeField] GameObject keyPadCover;
     [SerializeField] Collider2D[] keypadColliders;
+    [SerializeField] TextMesh ouputText;
+    [SerializeField] GameManager gameManager;
     string password = "";
-
 
     private void Start()
     {
@@ -39,21 +41,17 @@ public class KeypadController : InteractiveActions
         switch (inputValue)
         {
             case "C":
-                Debug.Log("Cancel");
                 password = "";
                 break;
             case "S":
-                Debug.Log("Submit");
                 VerifyPassword();
                 break;
             default:
-                Debug.Log("Input: " + inputValue);
                 if (password.Length < 4)
                 password += inputValue;
-                Debug.Log("Password: " + password);
                 break;
         }
-
+        ouputText.text = password;
     }
 
     void ChangeColliderStatus(Collider2D[] collider, bool status)
@@ -67,14 +65,17 @@ public class KeypadController : InteractiveActions
 
     void VerifyPassword()
     {
-        if (password == "1234")
+        if (password == "4913")
         {
-            Debug.Log("VICTORY");
+            SendUIMessage("YOU ESCAPED IN TIME!");
+            gameManager.PauseRequest(true);
+            gameManager.resumeButton.SetActive(false);
+            Time.timeScale = 0f;
         }
         else
         {
             password = "";
-            Debug.Log("Wrong Password");
+            SendUIMessage("Wrong Password");
         }
     }
 }

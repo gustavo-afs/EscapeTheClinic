@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BreakerController : MonoBehaviour
+public class BreakerController : InteractiveActions
 {
-
-
     //Vector breakers
     Quaternion
         openBreaker,    //The false value at the Vector
@@ -16,11 +14,13 @@ public class BreakerController : MonoBehaviour
 
     //RedLightSwitcher
     [SerializeField] RedLightSwitcher redLight;
+    [SerializeField] GameObject mriLights;
 
     void Start()
     {
         openBreaker = new Quaternion(0.4f, 0.0f, 0.0f, 0.9f);
         closedBreaker = new Quaternion(-0.3f, 0.0f, 0.0f, 1.0f);
+        mriLights.SetActive(false);
     }
 
     public Quaternion SwitchBreaker(int index)
@@ -43,6 +43,9 @@ public class BreakerController : MonoBehaviour
         if (controlBreaker[0] == true & controlBreaker[1] == false & controlBreaker[2] == false & controlBreaker[3] == true & controlBreaker[4] == false)
         {
             redLight.isLightOn = true;
+            SendUIMessage("Badge Sequence Worked!");
+            gameObject.GetComponent<Collider>().enabled = true;
+            mriLights.SetActive(true);
         }
     }
 }

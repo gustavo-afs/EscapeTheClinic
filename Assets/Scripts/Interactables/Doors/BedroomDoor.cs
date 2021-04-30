@@ -17,6 +17,7 @@ public class BedroomDoor : SimpleDoorMove
                 {
                     isLocked = false;
                     StartCoroutine(MoveDoor());
+                    SendUIMessage("Bedroom Door Unlocked");
                 }
             }
             else

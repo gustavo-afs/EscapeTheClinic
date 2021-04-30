@@ -24,7 +24,7 @@ public class BadgeHolder : InteractiveActions
             {
                 if (!badgeStored)
                 {
-                    Debug.Log("This Badge Holder Needs a Card");
+                    SendUIMessage("This Badge Holder Needs a Badge");
                 }
                 else
                 {
@@ -39,7 +39,7 @@ public class BadgeHolder : InteractiveActions
                 if (!badgeStored)
                 {
                     InsertBadge(HoldingItem());
-                    Debug.Log("Badge Inserted");
+                    SendUIMessage("Badge Inserted");
                     //verify condition
                 }
                 else //If there`s a badge in the BadgeHolder and another badge at the player`s hand
@@ -52,7 +52,7 @@ public class BadgeHolder : InteractiveActions
             //If the Player is Holding any other thing that is not a badge
             else 
             {
-                Debug.Log("Nothing Happened"); 
+                SendUIMessage("Nothing Happened"); 
             }
             if (badgeStored)
             {

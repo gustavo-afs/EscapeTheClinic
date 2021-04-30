@@ -1,17 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InteractiveActions : MonoBehaviour
 {
     GameObject player;
     GameObject playerHand;
     Vector3 playerHandPosition;
+    Text outputField;
+    
+
 
     void Awake()
     {
         player = GameObject.Find("Player");
         playerHand = GameObject.FindGameObjectWithTag("Hand");
+        outputField = GameObject.Find("OutputField").GetComponent<Text>();
     }
 
     protected void GrabItem(GameObject itemObject)
@@ -64,28 +69,35 @@ public class InteractiveActions : MonoBehaviour
                 if (simpleKeyComponent.keyIndex == lockIndex) //If it`s the correct key
                 {
                     DestroyUsedObject();
-                    Debug.Log("Unlocked");
+                    SendUIMessage("Unlocked!");
                     return true;
                 }
                 else //if it`s the wrong key
                 {
-                    Debug.Log("Wrong Key");
+                    SendUIMessage("Wrong Key");
                 }
             }
             else //if it`s holding any other object
             {
-                Debug.Log("Nothing Happened");
+                SendUIMessage("Nothing Happened");
             }
         }
         else //if the hand is empty
         {
-            Debug.Log("It's locked");
+            SendUIMessage("It's locked");
         }
         return false;
     }
 
     protected void SendUIMessage(string message)
     {
+        outputField.text = message;
+        StartCoroutine(HideMessage());
+    }
 
+    IEnumerator HideMessage()
+    {
+        yield return new WaitForSeconds(2f);
+        outputField.text = "";
     }
 }

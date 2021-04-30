@@ -35,9 +35,4 @@ public class BadgeController : MonoBehaviour
             }
         }
     }
-
-    private void Update()
-    {
-        //Debug.Log(badgeSequence[0] + " " + badgeSequence[1] + " " + badgeSequence[2]);
-    }
 }

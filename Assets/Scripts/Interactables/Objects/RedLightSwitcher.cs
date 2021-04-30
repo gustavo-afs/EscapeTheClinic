@@ -18,7 +18,7 @@ public class RedLightSwitcher : InteractiveActions
             }
             else
             {
-                Debug.Log("Nothing Happened");
+                SendUIMessage("Nothing Happened");
             }
 
         }
