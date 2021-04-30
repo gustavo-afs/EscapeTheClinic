@@ -47,32 +47,33 @@ The GUI element is the Pause Menu that appears when the player press the "space 
 
 ## Puzzles
 
-1º Bedroom Puzzle
+### 1º Bedroom Puzzle
 
->Main Elements:
+Main Elements:
 
 -Bedroom Door
 
 -Door Key
 
->Puzzle Explanation:
+Puzzle Explanation:
 
-The Player awakes in the bedroom, the door that leads to the corridor is locked and he must find the key to opened it. He can access another door behind him that leads to the Toxic Room, there the player can find the key behind the barrel, he must click to interact with the key to grab it and click again at the door to unlock it.
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-2º FuseBox Puzzle
+>The Player awakes in the bedroom, the door that leads to the corridor is locked and he must find the key to opened it. He can access another door behind him that leads to the Toxic Room, there the player can find the key behind the barrel, he must click to interact with the key to grab it and click again at the door to unlock it.
 
->Main Elements
+### 2º FuseBox Puzzle
+
+Main Elements:
 
 -FuseBox 
 
 -Paper with the switch breakers solution (Sequence is: Up, Down, Down, Up, Down)
 
->Puzzle Explanation
-The player must find the paper located on the pantry bench, understand that the sequence is related to the FuseBox and reproduce this sequence at the switchbreakers. after that the light at the MRI room will be turned on and the player will be able to see what's inside
+Puzzle Explanation
 
-3º Badges Puzzle
+>The player must find the paper located on the pantry bench, understand that the sequence is related to the FuseBox and reproduce this sequence at the switchbreakers. after that the light at the MRI room will be turned on and the player will be able to see what's inside
 
->Main Elements
+### 3º Badges Puzzle
+
+Main Elements:
 
 -Light switcher at the MRI Room
 
@@ -84,22 +85,23 @@ The player must find the paper located on the pantry bench, understand that the 
 
 >Puzzle Explanation
 
-The Player must find the badges and place it correctly at the badge holder, next to the office door. The badges have symbols and have to be placed in a correct sequence in order to unlock the Office. The Solution for that is at the MRI room before, there's is a light Switcher between the window and the door that when pressed the player can see the correct symbols to be placed at the door and must find all three badges that are located at the bedroom above the table next to the bed, inside the MRI room above the MRI equipment and above the reception table.
+>The Player must find the badges and place it correctly at the badge holder, next to the office door. The badges have symbols and have to be placed in a correct sequence in order to unlock the Office. The Solution for that is at the MRI room before, there's is a light Switcher between the window and the door that when pressed the player can see the correct symbols to be placed at the door and must find all three badges that are located at the bedroom above the table next to the bed, inside the MRI room above the MRI equipment and above the reception table.
 
-4º Dr. television Puzzle
+### 4º Dr. television Puzzle
 
->Main Elements
+Main Elements:
 
 -Television Screen
 
 -Blood Samples with colors
 
->Puzzle Explanation
-Inside the office, the Player must interect with the white circles clicking at then to find the correct sequence of colors, these colors can be found at the pantry or at the Toxic Room, those are the only objects that have all the same colors that the player can use, after select the correct sequence the Red Key glass jar is unlocked.
+Puzzle Explanation:
 
-5º Keypad Puzzle
+>Inside the office, the Player must interect with the white circles clicking at then to find the correct sequence of colors, these colors can be found at the pantry or at the Toxic Room, those are the only objects that have all the same colors that the player can use, after select the correct sequence the Red Key glass jar is unlocked.
 
->Main Elements
+### 5º Keypad Puzzle
+
+Main Elements:
 
 -Red Key
 
