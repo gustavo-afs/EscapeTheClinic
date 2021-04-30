@@ -25,10 +25,10 @@ public class ColorController : InteractiveActions
     {
         colorKeys[keyIndex] = colorIndex;
 
-        if (colorKeys[0].ToString() == "RGBA(0.082, 0.380, 0.090, 1.000)" & 
-            colorKeys[1].ToString() == "RGBA(0.082, 0.408, 0.635, 1.000)" & 
-            colorKeys[2].ToString() == "RGBA(0.639, 0.082, 0.082, 1.000)" & 
-            colorKeys[3].ToString() == "RGBA(0.427, 0.078, 0.627, 1.000)")
+        if (colorKeys[0].ToString() == "RGBA(0.427, 0.078, 0.627, 1.000)" & 
+            colorKeys[1].ToString() == "RGBA(0.082, 0.380, 0.090, 1.000)" & 
+            colorKeys[2].ToString() == "RGBA(0.082, 0.408, 0.635, 1.000)" & 
+            colorKeys[3].ToString() == "RGBA(0.639, 0.082, 0.082, 1.000)")
         {
             screenText.text = "Thank you Dr., now your Key is available at your Desk";            
             foreach(GameObject circle in circleKeys)
