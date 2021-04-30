@@ -115,11 +115,11 @@ Puzzle Explanation:
 
 >The player must grab the red key and unlock the keypad cabinet, after that he must find the 4 digits to unlock the door. The tip can be found at the reception table in a paper that says that the key is the Dr. Extension number, the player must go to the Dr's Office and check his phone to see the number (4913), type it at the keypad and press the green key.
 
-#Level Design
+## Level Design
 
 The level design of this game was made mainly with the package: https://assetstore.unity.com/packages/3d/environments/hospital-medical-office-modular-165327
 The ideia is that it seems a little dark with low lights but apparently clean and normal.
 
-#Sound Design
+## Sound Design
 
 I selected a Background Music that leads the game in a thrilling ambient. other sounds like the objects interaction are dry to help the ambience.
