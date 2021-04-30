@@ -67,7 +67,7 @@ Main Elements:
 
 -Paper with the switch breakers solution (Sequence is: Up, Down, Down, Up, Down)
 
-Puzzle Explanation
+Puzzle Explanation:
 
 >The player must find the paper located on the pantry bench, understand that the sequence is related to the FuseBox and reproduce this sequence at the switchbreakers. after that the light at the MRI room will be turned on and the player will be able to see what's inside
 
@@ -83,7 +83,7 @@ Main Elements:
 
 -Dr's Office
 
-Puzzle Explanation
+Puzzle Explanation:
 
 >The Player must find the badges and place it correctly at the badge holder, next to the office door. The badges have symbols and have to be placed in a correct sequence in order to unlock the Office. The Solution for that is at the MRI room before, there's is a light Switcher between the window and the door that when pressed the player can see the correct symbols to be placed at the door and must find all three badges that are located at the bedroom above the table next to the bed, inside the MRI room above the MRI equipment and above the reception table.
 
@@ -111,7 +111,7 @@ Main Elements:
 
 -Dr. Phone with the Extension number
 
-Puzzle Explanation
+Puzzle Explanation:
 
 >The player must grab the red key and unlock the keypad cabinet, after that he must find the 4 digits to unlock the door. The tip can be found at the reception table in a paper that says that the key is the Dr. Extension number, the player must go to the Dr's Office and check his phone to see the number (4913), type it at the keypad and press the green key.
 
