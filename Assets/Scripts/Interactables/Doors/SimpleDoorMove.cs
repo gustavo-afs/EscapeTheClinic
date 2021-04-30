@@ -33,7 +33,7 @@ public class SimpleDoorMove : InteractiveActions
             doorAnimator.Play("Closing 1");
             isClosed = true;
         }
-
+        PlayAudio();
         yield return new WaitForSeconds(.8f);
         doorCollider.enabled = true;
     }

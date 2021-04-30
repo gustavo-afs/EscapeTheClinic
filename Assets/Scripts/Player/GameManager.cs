@@ -12,6 +12,7 @@ public class GameManager : InteractiveActions
     [SerializeField] float beatTimeMin = 1;
     [SerializeField] GameObject menuPanel;
     public GameObject resumeButton;
+    public AudioSource backgroundAudio;
 
     Color colorTransparent;
     Color colorOpaque;
@@ -27,10 +28,11 @@ public class GameManager : InteractiveActions
         colorOpaque = vignetteImage.color;
         colorOpaque.a = 1f;
         menuPanel.SetActive(false);
+        backgroundAudio = gameObject.GetComponent<AudioSource>();
+        backgroundAudio.Play();
     }
     void Update()
     {
-        Debug.Log(Time.timeScale);
         //Pause Menu Request
         if (!lost)
         {
@@ -45,7 +47,6 @@ public class GameManager : InteractiveActions
             if (countDown > 0)
             {
                 countDown = Mathf.Max(countDown - Time.deltaTime, 0f);
-                Debug.Log("Countdown Timer: " + countDown);
                 vignetteImage.color = Color.Lerp(colorTransparent, colorOpaque, Mathf.PingPong(Time.time * beatTime, 1f));
             }
             else

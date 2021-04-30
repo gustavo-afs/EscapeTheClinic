@@ -6,6 +6,7 @@ public class BedroomDoor : SimpleDoorMove
 {
     bool isLocked = true;
     int lockIndex = 0;
+    [SerializeField] AudioClip unlockDoor;
 
     private void OnMouseOver()
     {
@@ -18,6 +19,7 @@ public class BedroomDoor : SimpleDoorMove
                     isLocked = false;
                     StartCoroutine(MoveDoor());
                     SendUIMessage("Bedroom Door Unlocked");
+                    PlayAudio(unlockDoor);
                 }
             }
             else

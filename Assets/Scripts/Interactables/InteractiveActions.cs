@@ -9,7 +9,7 @@ public class InteractiveActions : MonoBehaviour
     GameObject playerHand;
     Vector3 playerHandPosition;
     Text outputField;
-    
+    AudioSource audioSource;
 
 
     void Awake()
@@ -17,6 +17,7 @@ public class InteractiveActions : MonoBehaviour
         player = GameObject.Find("Player");
         playerHand = GameObject.FindGameObjectWithTag("Hand");
         outputField = GameObject.Find("OutputField").GetComponent<Text>();
+        audioSource = gameObject.GetComponent<AudioSource>();
     }
 
     protected void GrabItem(GameObject itemObject)
@@ -99,5 +100,16 @@ public class InteractiveActions : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         outputField.text = "";
+    }
+
+    protected void PlayAudio(AudioClip audioClip)
+    {
+        audioSource.clip = audioClip;
+        audioSource.Play();
+    }
+
+    protected void PlayAudio()
+    {
+        audioSource.Play();
     }
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BadgeController : MonoBehaviour
+public class BadgeController : InteractiveActions
 {
     int[] badgeSequence = new int[3];
     [SerializeField] OfficeDoor officeDoor;
@@ -33,6 +33,7 @@ public class BadgeController : MonoBehaviour
             {
                 badgeHolder[i].enabled = false;
             }
+            PlayAudio();
         }
     }
 }

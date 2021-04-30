@@ -20,6 +20,7 @@ public class RedLightSwitcher : InteractiveActions
             {
                 SendUIMessage("Nothing Happened");
             }
+            PlayAudio();
 
         }
 

@@ -43,9 +43,10 @@ public class BreakerController : InteractiveActions
         if (controlBreaker[0] == true & controlBreaker[1] == false & controlBreaker[2] == false & controlBreaker[3] == true & controlBreaker[4] == false)
         {
             redLight.isLightOn = true;
-            SendUIMessage("Badge Sequence Worked!");
+            SendUIMessage("Breaker Sequence Worked!");
             gameObject.GetComponent<Collider>().enabled = true;
             mriLights.SetActive(true);
+            PlayAudio();
         }
     }
 }

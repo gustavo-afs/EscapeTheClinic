@@ -27,6 +27,7 @@ public class ColorCircle : InteractiveActions
             Color newColor = circleColors[colorIndex];
             gameObject.GetComponent<SpriteRenderer>().color = newColor;
             colorController.UpdateCircleKeys(keyIndex, newColor);
+            PlayAudio();
         }
     }
 }

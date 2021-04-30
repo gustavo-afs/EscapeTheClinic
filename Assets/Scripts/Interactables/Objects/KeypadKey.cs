@@ -14,9 +14,10 @@ public class KeypadKey : InteractiveActions
 
     private void OnMouseOver()
     {
-        if (ValidatePlayerClick())
+        if (ValidatePlayerClick() & keypadController.UnlockCheck())
         {
             keypadController.KeyInput(keyValue);
+            PlayAudio();
         }
     }
 }

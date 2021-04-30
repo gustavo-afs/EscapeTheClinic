@@ -13,6 +13,9 @@ public class KeypadController : InteractiveActions
     [SerializeField] TextMesh ouputText;
     [SerializeField] GameManager gameManager;
     string password = "";
+    [SerializeField] AudioClip wrongPassword;
+    [SerializeField] AudioClip correctPassword;
+    bool isUnlocked = false;
 
     private void Start()
     {
@@ -31,6 +34,7 @@ public class KeypadController : InteractiveActions
                     keyPadCover.transform.localRotation = new Quaternion(0.0f, 0.8f, 0.0f, 0.6f);
                     gameObject.GetComponent<Collider>().enabled = false;
                     ChangeColliderStatus(keypadColliders, true);
+                    PlayAudio();
                 }
             }
         }
@@ -71,11 +75,19 @@ public class KeypadController : InteractiveActions
             gameManager.PauseRequest(true);
             gameManager.resumeButton.SetActive(false);
             Time.timeScale = 0f;
+            PlayAudio(correctPassword);
+            isUnlocked = true;
         }
         else
         {
             password = "";
             SendUIMessage("Wrong Password");
+            PlayAudio(wrongPassword);
         }
+    }
+
+    public bool UnlockCheck()
+    {
+        return !isUnlocked;
     }
 }

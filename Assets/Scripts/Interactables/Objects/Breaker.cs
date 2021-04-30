@@ -18,6 +18,7 @@ public class Breaker : InteractiveActions
         if (ValidatePlayerClick())
         {
             transform.rotation = fuseboxScript.SwitchBreaker(breakerindex);
+            PlayAudio();
         }
     }
 

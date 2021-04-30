@@ -31,6 +31,7 @@ public class BadgeHolder : InteractiveActions
                     GrabItem(badgeStored);
                     //verify win condition
                     badgeStored = null;
+                    PlayAudio();
                 }
             }
             //If the Player is Holding a Badge
@@ -48,6 +49,7 @@ public class BadgeHolder : InteractiveActions
                     GrabItem(badgeStored);
                     InsertBadge(tempSwitchBadge);
                 }
+                PlayAudio();
             }
             //If the Player is Holding any other thing that is not a badge
             else 

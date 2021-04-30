@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ColorController : MonoBehaviour
+public class ColorController : InteractiveActions
 {
     [SerializeField] Animator keyGlass;
     [SerializeField] Text screenText;
@@ -36,6 +36,7 @@ public class ColorController : MonoBehaviour
                 circle.SetActive(false);
             }
             keyGlass.Play("KeyGlass");
+            PlayAudio();
         }    
     }
 

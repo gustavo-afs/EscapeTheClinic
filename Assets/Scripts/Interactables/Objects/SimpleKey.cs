@@ -14,6 +14,7 @@ public class SimpleKey : InteractiveActions
                 DropObjectTo(gameObject);
             }
             GrabItem(gameObject);
+            PlayAudio();
         }
             
     }
